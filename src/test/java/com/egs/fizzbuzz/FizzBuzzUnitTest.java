@@ -26,4 +26,19 @@ class FizzBuzzUnitTest {
         assertNotNull(result);
         assertEquals(2, StringUtils.countMatches(result, "FizzBuzz"));
     }
+
+    @Test
+    void when_callGetFizzBuzzStringWithDivisibleBy15NumberAsInput_then_properNumberOfFizzAndBuzzShouldBeReturned(){
+        String result = fizzBuzz.getFizzBuzzString(30);
+        assertNotNull(result);
+        assertEquals(10, StringUtils.countMatches(result, "Fizz"));
+        assertEquals(6, StringUtils.countMatches(result, "Buzz"));
+    }
+    @Test
+    void when_callGetFizzBuzzStringWithNonDivisibleBy3Or5NumberAsInput_then_noFizzNorBuzzShouldBeReturned(){
+        String result = fizzBuzz.getFizzBuzzString(2);
+        assertNotNull(result);
+        assertEquals(0, StringUtils.countMatches(result, "Fizz"));
+        assertEquals(0, StringUtils.countMatches(result, "Buzz"));
+    }
 }
