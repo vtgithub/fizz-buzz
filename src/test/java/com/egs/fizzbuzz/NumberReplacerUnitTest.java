@@ -33,7 +33,6 @@ class NumberReplacerUnitTest {
         NumberReplacer numberReplacer = new NumberReplacer(new TreeMap<>());
         String result = numberReplacer.getNumberReplacedString(10);
         assertNotNull(result);
-        System.out.println(result);
         assertEquals(10, result.split(" ").length);
     }
 }
